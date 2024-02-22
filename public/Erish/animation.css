@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease; 
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, linen,maroon);;
+    z-index: -1;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 10vh;
+    color: white;
+    align-items: center;
+    font-size: 24px;
+}
+
+.logo{
+    grid-column: 2/3;
+    
+}
+
+.hamburger{
+    justify-self: end;
+}
+
+section{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    position: relative; 
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.headline {
+    position: absolute;
+    top: 80%;
+    left: -100%;
+    font-size: 20px;
+    color: white;
+    z-index: 3;
+    animation: slideIn 5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        left: -100%; 
+    }
+    to {
+        opacity: 1;
+        left: 15%; 
+    }
+}
+
+.hero::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.3;
+}
+
+
+footer {
+    background-color: beige;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+
+  .headline2 {
+    position: absolute;
+    top: 80%;
+    left: -100%;
+    font-size: 80px;
+    color: white;
+    z-index: 3;
+    animation: slideIn 5s ease forwards;
+    opacity: 0;
+}
